@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Description" content="">
+    <meta name="Keywords" content="">
+    <meta name="Author" content="michaldolny.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>elmoSlider demo</title>
+    <link rel="stylesheet" href="elmo-slider.css">
+</head>
+<body>
+
+<div class="slider-wrap">
+    <div class="slide-left">&lt;</div>
+    <div class="slide-right">&gt;</div>
+
+    <div class="slider">
+        <article class="slide slide1">
+            <p>Slide 1. Lorem ipsum dolor sit amet</p>
+        </article>
+
+        <article class="slide slide2">
+            <p>Slide 2. Lorem ipsum dolor sit amet</p>
+        </article>
+
+        <article class="slide slide3">
+            <p>Slide 3. Lorem ipsum dolor sit amet</p>
+        </article>
+    </div>
+</div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+<script src="elmo-slider.js"></script>
+<script>
+    $(document).ready(function() {
+        $('.slider').elmoSlider();
+    }); 
+</script>
+
+</body>
+</html>

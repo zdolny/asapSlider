@@ -1,0 +1,35 @@
+.slider-wrap {
+    position: relative;
+    width: 360px;
+    height: 245px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.slide-left {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+}
+.slide-right {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+}
+.slider {
+    width: 300%;
+    height: 100%;
+}
+.slide {
+    width: 360px;
+    height: 100%;
+    float: left;
+}
+.slide1 {
+    background: url("img/elmo_01.jpg") no-repeat;
+}
+.slide2 {
+    background: url("img/elmo_02.jpg") no-repeat;
+}
+.slide3 {
+    background: url("img/elmo_03.jpg") no-repeat;
+}

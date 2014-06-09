@@ -2,9 +2,9 @@
 //  dependencies: jQuery
 
 $.fn.elmoSlider = function() {
-    // 3 slides, each 1020px wide
+    // 3 slides, each 360px wide
     // state represents margin that will be applied to each slide
-    var state = ['0', '-1020px', '-2040px'],
+    var state = ['0', '-360px', '-720px'],
         i = 0,  // start point
         slider = this;
     $('.slide-left').on('click', function(){
