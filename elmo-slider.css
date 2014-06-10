@@ -5,13 +5,19 @@
     margin: 0 auto;
     overflow: hidden;
 }
-.slide-left {
+.slide-left,
+.slide-right {
     position: absolute;
+}
+.slide-left:hover,
+.slide-right:hover {
+    cursor: pointer;
+} 
+.slide-left {
     top: 50%;
     left: 5%;
 }
 .slide-right {
-    position: absolute;
     top: 50%;
     right: 5%;
 }
@@ -32,4 +38,12 @@
 }
 .slide3 {
     background: url("img/elmo_03.jpg") no-repeat;
+}
+
+
+.slide p {
+    display: inline-block;
+    margin: 50% 0 0;
+    padding: .5em;
+    background: rgba(255, 255, 255, .7);
 }
