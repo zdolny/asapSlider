@@ -8,6 +8,7 @@
 .slide-left,
 .slide-right {
     position: absolute;
+    background: rgba(255, 255, 255, .7);
 }
 .slide-left:hover,
 .slide-right:hover {
@@ -15,11 +16,13 @@
 } 
 .slide-left {
     top: 50%;
-    left: 5%;
+    left: 0;
+    padding: .2em .2em .2em 5%;
 }
 .slide-right {
     top: 50%;
-    right: 5%;
+    right: 0;
+    padding: .2em 5% .2em .2em;
 }
 .slider {
     width: 300%;
