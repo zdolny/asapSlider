@@ -1,4 +1,4 @@
-//  elmoSlider v0.0.2 by Michal Dolny
+//  elmoSlider v0.0.3 by Michal Dolny
 //  dependencies: jQuery
 
 $.fn.elmoSlider = function(n, x) {
