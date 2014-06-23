@@ -12,7 +12,6 @@ $.fn.elmoSlider = function(n, x) {
     for(var j=1; j<n; j++){
         state[j]=-(j*x);
     }
-    console.log(state);
     $('.slide-left').on('click', function(){
         i--;
         if( i < 0 ){ i = 2 };
