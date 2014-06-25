@@ -12,12 +12,12 @@ $.fn.elmoSlider = function(n, x) {
     for(var j=1; j<n; j++){
         state[j]=-(j*x);
     }
-    $('.slide-left').on('click', function(){
+    $('.slider-wrap .slide-left').on('click', function(){
         i--;
         if( i < 0 ){ i = 2 };
         slider.animate({'margin-left': state[i]}, 'slow');
     });
-    $('.slide-right').on('click', function(){
+    $('.slider-wrap .slide-right').on('click', function(){
         i++;
         if( i > 2 ){ i = 0 };
         slider.animate({'margin-left': state[i]}, 'slow');
