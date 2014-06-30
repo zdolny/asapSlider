@@ -8,8 +8,7 @@ h2 {
 }
 
 .slider-wrap,
-.slider2-wrap,
-.slider3 {
+.slider2-wrap {
     position: relative;
     width: 360px;
     height: 245px;
@@ -72,4 +71,36 @@ h2 {
     background: rgba(255, 255, 255, .7);
 }
 
-.slider3
+/* [ slider3 ] */
+.slider3 {
+    position: relative;
+}
+.slider3 .slider-content {
+    position: relative;
+    width: 360px;
+    height: 245px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.slider3 .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+}
+.slider3 .slide-left {
+    top: 50%;
+    left: 50%;
+    margin-left: -290px;
+    padding: .2em .2em .2em 5%;
+}
+.slider3 .slide-right {
+    top: 50%;
+    right: 50%;
+    margin-right: -290px;
+    padding: .2em 5% .2em .2em;
+}
+
+
