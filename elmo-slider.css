@@ -102,5 +102,9 @@ h2 {
     margin-right: -290px;
     padding: .2em 5% .2em .2em;
 }
+.slider3 .active-slide {
+    opacity: 1;
+    z-index: 100;
+}
 
 
