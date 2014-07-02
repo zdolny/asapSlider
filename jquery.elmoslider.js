@@ -12,19 +12,24 @@ $.fn.elmoSlider = function(n, x, anim) {
     for(var j=1; j<n; j++){
         state[j]=-(j*x);
     }
-    $('.slider-wrap .slide-left').on('click', function(){
+    $('.slide-left').on('click', function(){
         i--;
         if( i < 0 ){ i = 2 };
-        if(anim === 'opacity'){
+        if(anim == 'opacity'){
             $('.active-slide').removeClass('active-slide');
-            $('.slide'+i).addClass('active-slide');
+            $('.slide'+(i+1)).addClass('active-slide');
         }else{
             slider.animate({'margin-left': state[i]}, 'slow');
         };
     });
-    $('.slider-wrap .slide-right').on('click', function(){
+    $('.slide-right').on('click', function(){
         i++;
         if( i > 2 ){ i = 0 };
-        slider.animate({'margin-left': state[i]}, 'slow');
+        if(anim == 'opacity'){
+            $('.active-slide').removeClass('active-slide');
+            $('.slide'+(i+1)).addClass('active-slide');
+        }else{
+            slider.animate({'margin-left': state[i]}, 'slow');
+        };
     });
 };
