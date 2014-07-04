@@ -12,7 +12,7 @@ $.fn.elmoSlider = function(n, x, anim) {
     for(var j=1; j<n; j++){
         state[j]=-(j*x);
     }
-    $('.slide-left').on('click', function(){
+    $(slider).on('click', '.slide-left', function(){
         i--;
         if( i < 0 ){ i = 2 };
         if(anim == 'opacity'){
@@ -22,7 +22,7 @@ $.fn.elmoSlider = function(n, x, anim) {
             slider.animate({'margin-left': state[i]}, 'slow');
         };
     });
-    $('.slide-right').on('click', function(){
+    $(slider).on('click', '.slide-right', function(){
         i++;
         if( i > 2 ){ i = 0 };
         if(anim == 'opacity'){
