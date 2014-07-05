@@ -19,7 +19,7 @@ $.fn.elmoSlider = function(n, x, anim) {
             $('.active-slide').removeClass('active-slide');
             $('.slide'+(i+1)).addClass('active-slide');
         }else{
-            slider.animate({'margin-left': state[i]}, 'slow');
+            $(slider).find('.slider-content').animate({'margin-left': state[i]}, 'slow');
         };
     });
     $(slider).on('click', '.slide-right', function(){
@@ -29,7 +29,7 @@ $.fn.elmoSlider = function(n, x, anim) {
             $('.active-slide').removeClass('active-slide');
             $('.slide'+(i+1)).addClass('active-slide');
         }else{
-            slider.animate({'margin-left': state[i]}, 'slow');
+            $(slider).find('.slider-content').animate({'margin-left': state[i]}, 'slow');
         };
     });
 };

@@ -12,11 +12,11 @@
 <body>
 
 <h2>Demo with jQuery</h2>
-<div class="slider-wrap">
+<div class="slider1 slider-wrap">
     <div class="slide-left">&lt;</div>
     <div class="slide-right">&gt;</div>
 
-    <div class="slider">
+    <div class="slider-content">
         <article class="slide slide1">
             <p>Slide 1. Lorem ipsum dolor sit amet</p>
         </article>
@@ -80,7 +80,7 @@
 <script src="elmoslider.js"></script>
 <script>
     $(document).ready(function() {
-        $('.slider').elmoSlider(3, 360);
+        $('.slider1').elmoSlider(3, 360);
     });
     document.addEventListener("DOMContentLoaded", function(){
         var slider = document.querySelector('.slider2');
