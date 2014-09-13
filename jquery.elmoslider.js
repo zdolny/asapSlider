@@ -1,14 +1,14 @@
 //  elmoSlider v0.0.3 by Michal Dolny
 //  dependencies: jQuery
 
-$.fn.elmoSlider = function(n, x, anim) {
+$.fn.elmoSlider = function(content, n, x, anim) {
     // n - number of slides
     // x - slide width
     // example - 3 slides, each 360px wide
     // state represents margin that will be applied to each slide
     var state = [0],
         i = 0,  // start point
-        slider = this;
+        slider = content;
     for(var j=1; j<n; j++){
         state[j]=-(j*x);
     }
