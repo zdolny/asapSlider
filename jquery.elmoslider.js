@@ -1,7 +1,13 @@
 //  elmoSlider v0.0.3 by Michal Dolny
 //  dependencies: jQuery
 
-$.fn.elmoSlider = function(content, n, x, anim) {
+$.fn.elmoSlider = function(options) {
+    var defaults = {
+        content: 'smth',
+        n: 'smth',
+        x: 'smth',
+        anim: 'smth'
+    };
     // n - number of slides
     // x - slide width
     // example - 3 slides, each 360px wide
