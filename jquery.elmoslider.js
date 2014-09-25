@@ -1,6 +1,8 @@
 //  elmoSlider v0.0.3 by Michal Dolny
 //  dependencies: jQuery
 
+(function($){
+
 $.fn.elmoSlider = function(options) {
     var defaults = {
         content: 'smth',
@@ -39,3 +41,5 @@ $.fn.elmoSlider = function(options) {
         };
     });
 };
+
+})(jQuery);
