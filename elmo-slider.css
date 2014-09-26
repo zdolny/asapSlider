@@ -3,10 +3,6 @@
             box-sizing: border-box;
 }
 
-h2 {
-    text-align: center;
-}
-
 .slider-wrap,
 .slider2-wrap {
     position: relative;

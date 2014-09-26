@@ -31,7 +31,7 @@
     </div>
 </div>
 
-<h2>Demo without jQuery</h2>
+<!-- <h2>Demo without jQuery</h2>
 <div class="slider2-wrap">
     <div class="slide-left">&lt;</div>
     <div class="slide-right">&gt;</div>
@@ -49,9 +49,9 @@
             <p>Slide 3. Lorem ipsum dolor sit amet</p>
         </article>
     </div>
-</div>
+</div> -->
 
-<h2>Demo WIP</h2>
+<!-- <h2>Demo WIP</h2>
 <div class="slider3">
     <div class="slide-left">&lt;</div>
     <div class="slide-right">&gt;</div>
@@ -73,22 +73,22 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
 <script src="jquery.elmoslider.js"></script>
 <script src="elmoslider.js"></script>
 <script>
-    $(document).ready(function() {
-        $('.slider1').elmoSlider('slider1', 3, 360);
+    $(function(){
+        $('.slider1').elmoSlider();
     });
-    document.addEventListener("DOMContentLoaded", function(){
-        var slider = document.querySelector('.slider2');
-        elmoSlider.init(slider, 3, 360);
-    });
-    $(document).ready(function() {
-        $('.slider3').elmoSlider(3, 360, 'opacity');
-    });
+    // document.addEventListener("DOMContentLoaded", function(){
+    //     var slider = document.querySelector('.slider2');
+    //     elmoSlider.init(slider, 3, 360);
+    // });
+    // $(document).ready(function() {
+    //     $('.slider3').elmoSlider(3, 360, 'opacity');
+    // });
 </script>
 
 </body>

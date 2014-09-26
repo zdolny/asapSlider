@@ -1,45 +1,48 @@
-//  elmoSlider v0.0.3 by Michal Dolny
+//  elmoSlider v0.0.4 by Michal Dolny
 //  dependencies: jQuery
 
 (function($){
 
-$.fn.elmoSlider = function(options) {
-    var defaults = {
-        content: 'smth',
-        n: 'smth',
-        x: 'smth',
-        anim: 'smth'
+    $.fn.elmoSlider = function(options) {
+        var defaults = {
+            speed: 500,
+            pause: 1000,
+            anim: 'slide',
+            numberOfSlides: 3,
+            slideWidth: 360,
+            autoPlay: false
+        };
+        options = $.extend(defaults, options);
+
+        if(options.autoPlay === false){
+            var state = [0],
+            i = 0,  // start point
+            slider = this;
+            for(var j=1; j<options.numberOfSlides; j++){
+                state[j]=-(j*options.slideWidth);
+            }
+            $(slider).on('click', '.slide-left', function(){
+                i--;
+                if( i < 0 ){ i = 2 };
+                if(options.anim == 'opacity'){
+                    $('.active-slide').removeClass('active-slide');
+                    $('.slide'+(i+1)).addClass('active-slide');
+                }else{
+                    $(slider).find('.slider-content').animate({'margin-left': state[i]}, 'slow');
+                };
+            });
+            $(slider).on('click', '.slide-right', function(){
+                i++;
+                if( i > 2 ){ i = 0 };
+                if(options.anim == 'opacity'){
+                    $('.active-slide').removeClass('active-slide');
+                    $('.slide'+(i+1)).addClass('active-slide');
+                }else{
+                    $(slider).find('.slider-content').animate({'margin-left': state[i]}, 'slow');
+                };
+            });
+        }
+
     };
-    // n - number of slides
-    // x - slide width
-    // example - 3 slides, each 360px wide
-    // state represents margin that will be applied to each slide
-    var state = [0],
-        i = 0,  // start point
-        slider = content;
-    for(var j=1; j<n; j++){
-        state[j]=-(j*x);
-    }
-    $(slider).on('click', '.slide-left', function(){
-        i--;
-        if( i < 0 ){ i = 2 };
-        if(anim == 'opacity'){
-            $('.active-slide').removeClass('active-slide');
-            $('.slide'+(i+1)).addClass('active-slide');
-        }else{
-            $(slider).find('.slider-content').animate({'margin-left': state[i]}, 'slow');
-        };
-    });
-    $(slider).on('click', '.slide-right', function(){
-        i++;
-        if( i > 2 ){ i = 0 };
-        if(anim == 'opacity'){
-            $('.active-slide').removeClass('active-slide');
-            $('.slide'+(i+1)).addClass('active-slide');
-        }else{
-            $(slider).find('.slider-content').animate({'margin-left': state[i]}, 'slow');
-        };
-    });
-};
 
 })(jQuery);
