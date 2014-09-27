@@ -12,6 +12,7 @@
     overflow: hidden;
 }
 .slider-content {
+    width: 300%;
     height: 100%;
 }
 .slide-left,
