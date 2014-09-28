@@ -9,15 +9,15 @@
             pause: 1000,
             anim: 'slide',
             numberOfSlides: 3,
-            slideWidth: 360,
+            slideWidth: $(this).find('.slider-content').children().width(),
             autoPlay: false
         };
         options = $.extend(defaults, options);
 
         if(options.autoPlay === false){
-            var state = [0],
-            i = 0,  // start point
-            slider = this;
+            var state = [0];
+            var i = 0;  // start point
+            var slider = $(this);
             for(var j=1; j<options.numberOfSlides; j++){
                 state[j]=-(j*options.slideWidth);
             }
