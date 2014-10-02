@@ -14,24 +14,16 @@
         };
         options = $.extend(defaults, options);
 
-        // var state = [0];
-        // var i = 0; 
-        // var j = 0;
-        // var slider = $(this);
-        // this.each(function(){
-        //     var $this = $(this);
-            
-        //     state[j]=-(j * $this.width());
-        //     j++;
-        // });
+        var state = [0];
+        var i = 0; 
+        var j = 0;
+        var slider = $(this);
+        slider.find('.slide').each(function(){
+            state[j]=-(j * $(this).width());
+            j++;
+        });
 
         if(options.autoPlay === false){
-            var state = [0];
-            var i = 0;  // start point
-            var slider = $(this);
-            for(var j=1; j<options.numberOfSlides; j++){
-                state[j]=-(j*options.slideWidth);
-            }
             $(slider).on('click', '.slide-left', function(){
                 i--;
                 if( i < 0 ){ i = 2 };
