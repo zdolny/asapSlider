@@ -3,7 +3,7 @@
 
 (function($){
 
-    $.fn.elmoSlider = function(options) {
+    $.fn.elmoSlider = function(options){
         var defaults = {
             speed: 500,
             pause: 1000,
@@ -13,6 +13,17 @@
             autoPlay: false
         };
         options = $.extend(defaults, options);
+
+        // var state = [0];
+        // var i = 0; 
+        // var j = 0;
+        // var slider = $(this);
+        // this.each(function(){
+        //     var $this = $(this);
+            
+        //     state[j]=-(j * $this.width());
+        //     j++;
+        // });
 
         if(options.autoPlay === false){
             var state = [0];
