@@ -8,7 +8,6 @@
             speed: 500,
             pause: 1000,
             anim: 'slide',
-            numberOfSlides: 3,
             slideWidth: $(this).find('.slider-content').children().width(),
             autoPlay: false
         };
