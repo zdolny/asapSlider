@@ -17,6 +17,7 @@
         var i = 0; 
         var j = 0;
         var slider = $(this);
+        
         slider.find('.slide').each(function(){
             state[j]=-(j * $(this).width());
             j++;
