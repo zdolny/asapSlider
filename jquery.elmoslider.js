@@ -13,15 +13,19 @@
         };
         options = $.extend(defaults, options);
 
+        var slider = $(this);
         var state = [0];
         var i = 0; 
         var j = 0;
-        var slider = $(this);
-        
+
         slider.find('.slide').each(function(){
             state[j]=-(j * $(this).width());
             j++;
         });
+
+        slider.find('.slider-wrap').addBack('.slider-wrap').css({
+            width: options.slideWidth
+        })
 
         if(options.autoPlay === false){
             $(slider).on('click', '.slide-left', function(){
