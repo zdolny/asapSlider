@@ -8,7 +8,6 @@
             speed: 500,
             pause: 1000,
             anim: 'slide',
-            slideWidth: $(this).find('.slider-content').children().width(),
             autoPlay: false
         };
         options = $.extend(defaults, options);
@@ -23,9 +22,13 @@
             j++;
         });
 
-        slider.find('.slider-wrap').addBack('.slider-wrap').css({
-            width: options.slideWidth
-        })
+        slider.find('.slider-content').css({
+            width: (state.length * 100 + '%')
+        });
+        slider.find('.slide').css({
+            width: (100 / state.length + '%')
+        });
+
 
         if(options.autoPlay === false){
             $(slider).on('click', '.slide-left', function(){
