@@ -17,22 +17,28 @@
 
 ### 1. Include files
 
-	<link rel="stylesheet" href="elmo-slider.css">
-	<script src="elmoslider.js"></script>
+```html
+<link rel="stylesheet" href="elmo-slider.css">
+<script src="elmoslider.js"></script>
+```
 
 ### 2. Create HTML structure
 
-	<div class="this-is-my-slider slider-wrap">
-    	<div class="slide-left">&lt;</div>
-    	<div class="slide-right">&gt;</div>
+```html
+<div class="this-is-my-slider slider-wrap">
+	<div class="slide-left">&lt;</div>
+	<div class="slide-right">&gt;</div>
 
-    	<div class="slider-content">
-        	<div class="slide"> slide 1 </div>
-            <div class="slide"> slide 2 </div>
-            <div class="slide"> slide 3 </div>
-    	</div>
+	<div class="slider-content">
+    	<div class="slide"> slide 1 </div>
+        <div class="slide"> slide 2 </div>
+        <div class="slide"> slide 3 </div>
 	</div>
+</div>
+```
 
 ### 3. Call the elmoSlider
 
-	$('.this-is-my-slider').elmoSlider();
+```javascript
+$('.this-is-my-slider').elmoSlider();
+```
