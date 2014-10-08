@@ -19,7 +19,7 @@
 
 ```html
 <link rel="stylesheet" href="elmo-slider.css">
-<script src="elmoslider.js"></script>
+<script src="jquery.elmoslider.js"></script>
 ```
 
 ### 2. Create HTML structure
