@@ -1,5 +1,4 @@
 # elmoSlider
-============
 
 **Childishly simple jQuery slider which even Elmo could write by himself**
 
