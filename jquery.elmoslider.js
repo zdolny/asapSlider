@@ -22,32 +22,44 @@
             j++;
         });
 
-        slider.find('.slider-content').css({
-            width: (state.length * 100 + '%')
-        });
-        slider.find('.slide').css({
-            width: (100 / state.length + '%')
-        });
+        // setup css
+        if (options.anim === 'slide'){
+            slider.find('.slider-content').css({
+                width: (state.length * 100 + '%')
+            });
+            slider.find('.slide').css({
+                width: (100 / state.length + '%'),
+                'float': 'left'
+            });
+        } else if (options.anim === 'fade'){
+            slider.find('.slider-content').css({
+                width: (100 + '%')
+            });
+            slider.find('.slide').css({
+                width: (100 + '%'),
+                'float': 'none',
+                position: 'absolute'
+            });
+        }
 
-
-        if(options.autoPlay === false){
+        if (options.autoPlay === false){
             $(slider).on('click', '.slide-left', function(){
                 i--;
-                if( i < 0 ){ i = 2 };
-                if(options.anim == 'opacity'){
+                if ( i < 0 ){ i = 2 };
+                if (options.anim === 'fade'){
                     $('.active-slide').removeClass('active-slide');
                     $('.slide'+(i+1)).addClass('active-slide');
-                }else{
+                } else {
                     $(slider).find('.slider-content').animate({'margin-left': state[i]}, options.speed);
                 };
             });
             $(slider).on('click', '.slide-right', function(){
                 i++;
-                if( i > 2 ){ i = 0 };
-                if(options.anim == 'opacity'){
+                if ( i > 2 ){ i = 0 };
+                if (options.anim === 'fade'){
                     $('.active-slide').removeClass('active-slide');
                     $('.slide'+(i+1)).addClass('active-slide');
-                }else{
+                } else {
                     $(slider).find('.slider-content').animate({'margin-left': state[i]}, options.speed);
                 };
             });
