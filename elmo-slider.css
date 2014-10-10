@@ -11,8 +11,8 @@
     overflow: hidden;
 }
 .slider-content {
-    width: 300%;
     height: 100%;
+    position: relative;
 }
 .slide-left,
 .slide-right {
@@ -36,11 +36,14 @@
 }
 
 .slide {
-    width: 360px;
     height: 100%;
-    float: left;
     position: relative;
     z-index: 100;
+    -webkit-transition: all 0.8s ease;
+       -moz-transition: all 0.8s ease;
+        -ms-transition: all 0.8s ease;
+         -o-transition: all 0.8s ease;
+            transition: all 0.8s ease;
 }
 .active-slide {
     z-index: 200;
