@@ -44,6 +44,9 @@
         }
         $(slider).find('.slide').first().addClass('active-slide').css('opacity', '1');
 
+        if(options.pause <= options.speed) {
+            options.pause = options.speed + 100;
+        }
 
         if (options.autoPlay === false){
             $(slider).on('click', '.slide-left', function(){
