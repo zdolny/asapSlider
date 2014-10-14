@@ -44,7 +44,7 @@
         }
         $(slider).find('.slide').first().addClass('active-slide').css('opacity', '1');
 
-        if(options.pause <= options.speed) {
+        if (options.pause <= options.speed){
             options.pause = options.speed + 100;
         }
 
@@ -60,28 +60,25 @@
                 };
             });
             $(slider).on('click', '.slide-right', function(){
-                i++;
-                if ( i > 2 ){ i = 0 };
-                if (options.anim === 'fade'){
-                    $('.active-slide').removeClass('active-slide').animate({'opacity': 0}, options.speed);
-                    $('.slide'+(i+1)).addClass('active-slide').animate({'opacity': 1}, options.speed);
-                } else {
-                    $(slider).find('.slider-content').animate({'margin-left': state[i]}, options.speed);
-                };
+                slideForward();
             });
         }
 
         if (options.autoPlay === true){
-            setInterval(function() {
-                i++;
-                if ( i > 2 ){ i = 0 };
-                if (options.anim === 'fade'){
-                    $('.active-slide').removeClass('active-slide').animate({'opacity': 0}, options.speed);
-                    $('.slide'+(i+1)).addClass('active-slide').animate({'opacity': 1}, options.speed);
-                } else {
-                    $(slider).find('.slider-content').animate({'margin-left': state[i]}, options.speed);
-                };
+            setInterval(function(){
+                slideForward();
             }, options.pause);
+        }
+
+        function slideForward(){
+            i++;
+            if ( i > 2 ){ i = 0 };
+            if (options.anim === 'fade'){
+                $('.active-slide').removeClass('active-slide').animate({'opacity': 0}, options.speed);
+                $('.slide'+(i+1)).addClass('active-slide').animate({'opacity': 1}, options.speed);
+            } else {
+                $(slider).find('.slider-content').animate({'margin-left': state[i]}, options.speed);
+            };
         }
 
     };
