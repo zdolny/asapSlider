@@ -7,7 +7,7 @@
         var defaults = {
             speed: 500,
             pause: 2500,
-            anim: 'slide',
+            transition: 'slide',
             autoPlay: false
         };
         options = $.extend(defaults, options);
@@ -23,7 +23,7 @@
         });
 
         // setup css
-        if (options.anim === 'slide'){
+        if (options.transition === 'slide'){
             slider.find('.slider-content').css({
                 width: (state.length * 100 + '%')
             });
@@ -31,7 +31,7 @@
                 width: (100 / state.length + '%'),
                 'float': 'left',
             });
-        } else if (options.anim === 'fade'){
+        } else if (options.transition === 'fade'){
             slider.find('.slider-content').css({
                 width: (100 + '%')
             });
@@ -52,7 +52,7 @@
             $(slider).on('click', '.slide-left', function(){
                 i--;
                 if ( i < 0 ){ i = 2 };
-                if (options.anim === 'fade'){
+                if (options.transition === 'fade'){
                     $('.active-slide').removeClass('active-slide').animate({'opacity': 0}, options.speed);
                     $('.slide'+(i+1)).addClass('active-slide').animate({'opacity': 1}, options.speed);
                 } else {
@@ -73,7 +73,7 @@
         function slideForward(){
             i++;
             if ( i > 2 ){ i = 0 };
-            if (options.anim === 'fade'){
+            if (options.transition === 'fade'){
                 $('.active-slide').removeClass('active-slide').animate({'opacity': 0}, options.speed);
                 $('.slide'+(i+1)).addClass('active-slide').animate({'opacity': 1}, options.speed);
             } else {
