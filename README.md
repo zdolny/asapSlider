@@ -42,3 +42,13 @@
 ```javascript
 $('.this-is-my-slider').elmoSlider();
 ```
+
+## Options
+```javascript
+{
+    speed: 500,
+    pause: 2500,
+    transition: 'slide', // 'slide', 'fade'
+    autoPlay: false
+}
+```
