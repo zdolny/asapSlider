@@ -12,7 +12,7 @@
         };
         options = $.extend(defaults, options);
 
-        var slider = $(this);
+        var slider = this;
         var state = [0];
         var i = 0; 
         var j = 0;
@@ -81,6 +81,8 @@
             };
         }
 
+        // make plugin method chainable
+        return this;
     };
 
 })(jQuery);
