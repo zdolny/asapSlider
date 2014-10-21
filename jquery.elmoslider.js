@@ -8,7 +8,8 @@
             speed: 500,
             pause: 2500,
             transition: 'slide',
-            autoPlay: false
+            autoPlay: false,
+            complete: null
         };
         var settings = $.extend({}, defaults, options);
 
@@ -81,6 +82,12 @@
                 } else {
                     $(slider).find('.slider-content').animate({'margin-left': state[i]}, settings.speed);
                 };
+
+                if ($.isFunction(settings.complete)){
+                    setTimeout(function(){
+                        settings.complete.call(this);
+                    }, settings.speed);
+                }
             }
 
         });
