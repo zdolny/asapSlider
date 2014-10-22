@@ -51,14 +51,13 @@
                 settings.pause = settings.speed + 100;
             }
 
-            if (settings.autoPlay === false){
-                $(slider).on('click', '.slide-left', function(){
-                    prevSlide();
-                });
-                $(slider).on('click', '.slide-right', function(){
-                    nextSlide();
-                });
-            }
+            // slider
+            $(slider).on('click', '.slide-left', function(){
+                prevSlide();
+            });
+            $(slider).on('click', '.slide-right', function(){
+                nextSlide();
+            });
 
             if (settings.autoPlay === true){
                 setInterval(function(){
