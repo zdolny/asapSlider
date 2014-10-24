@@ -9,7 +9,7 @@
             pause: 2500,
             transition: 'slide',
             autoPlay: false,
-            complete: null
+            onSlideComplete: null
         };
         var settings = $.extend({}, defaults, options);
 
@@ -95,9 +95,9 @@
             }
 
             function afterComplete(){
-                if ($.isFunction(settings.complete)){
+                if ($.isFunction(settings.onSlideComplete)){
                     setTimeout(function(){
-                        settings.complete.call(this);
+                        settings.onSlideComplete.call(this);
                     }, settings.speed);
                 }
             }

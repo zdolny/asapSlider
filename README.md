@@ -49,6 +49,7 @@ $('.this-is-my-slider').elmoSlider();
     speed: 500,
     pause: 2500,
     transition: 'slide', // 'slide', 'fade'
-    autoPlay: false
+    autoPlay: false,
+    onSlideComplete: function(){ console.log('slide loaded'); }
 }
 ```
