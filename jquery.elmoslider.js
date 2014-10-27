@@ -47,11 +47,12 @@
             }
             $(slider).find('.slide').first().addClass('active-slide').css('opacity', '1');
 
+            // pause between transitions must be longer then transition itself 
             if (settings.pause <= settings.speed){
                 settings.pause = settings.speed + 100;
             }
 
-            // slider
+            // switch slides - manual
             $(slider).on('click', '.slide-left', function(){
                 prevSlide();
             });
@@ -59,6 +60,7 @@
                 nextSlide();
             });
 
+            // switch slides - auto
             if (settings.autoPlay === true){
                 setInterval(function(){
                     nextSlide();
