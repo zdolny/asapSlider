@@ -1,7 +1,7 @@
-//  elmoSlider v0.0.3 by Michal Dolny
+//  asapSlider v0.0.3 by Michal Dolny
 //  dependencies: none
 
-var elmoSlider = {
+var asapSlider = {
     init: function(slider, n, x){
         var state = [0],
             i = 0;  // start point

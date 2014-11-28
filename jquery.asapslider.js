@@ -1,9 +1,9 @@
-//  elmoSlider v0.0.4 by Michal Dolny
+//  asapSlider v0.0.4 by Michal Dolny
 //  dependencies: jQuery
 
 (function($){
 
-    $.fn.elmoSlider = function(options){
+    $.fn.asapSlider = function(options){
         var defaults = {
             speed: 500,
             pause: 2500,

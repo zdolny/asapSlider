@@ -6,9 +6,9 @@
     <meta name="Keywords" content="">
     <meta name="Author" content="michaldolny.com">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>elmoSlider demo</title>
+    <title>asapSlider demo</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="elmo-slider.css">
+    <link rel="stylesheet" href="asap-slider.css">
 </head>
 <body>
 
@@ -33,12 +33,12 @@
 </div>
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
-<script src="jquery.elmoslider.js"></script>
-<script src="elmoslider.js"></script>
+<script src="jquery.asapslider.js"></script>
+<script src="asapslider.js"></script>
 <script>
     $(function(){
-        $('.slider1').elmoSlider({
-            transition: 'fade', 
+        $('.slider1').asapSlider({
+            transition: 'slide', 
             autoPlay: true,
             onSlideComplete: function(){
                 console.log('complete');
@@ -47,7 +47,7 @@
     });
     // document.addEventListener("DOMContentLoaded", function(){
     //     var slider = document.querySelector('.slider2');
-    //     elmoSlider.init(slider, 3, 360);
+    //     asapSlider.init(slider, 3, 360);
     // });
 </script>
 

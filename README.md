@@ -1,6 +1,6 @@
-# elmoSlider
+# asapSlider
 
-**Childishly simple jQuery slider which even Elmo could write by himself**
+**Childishly simple jQuery slider which you can use ASAP!**
 
 #### Currently this slider is not:
 - responsive
@@ -11,15 +11,13 @@
 #### But it actually is:
 - simple
 
-**Elmo** want to show you that next time when your mind will tell you _I must find some slider plugin_ and you will wondering _Which one should I choose?_ - you can just write your own.
-
 ## How to use
 
 ### 1. Include files
 
 ```html
-<link rel="stylesheet" href="elmo-slider.css">
-<script src="jquery.elmoslider.js"></script>
+<link rel="stylesheet" href="asap-slider.css">
+<script src="jquery.asapslider.js"></script>
 ```
 
 ### 2. Create HTML structure
@@ -37,19 +35,19 @@
 </div>
 ```
 
-### 3. Call the elmoSlider
+### 3. Call the asapSlider
 
 ```javascript
-$('.this-is-my-slider').elmoSlider();
+$('.this-is-my-slider').asapSlider();
 ```
 
 ## Options
 ```javascript
-{
+$('.this-is-my-slider').asapSlider({
     speed: 500,
     pause: 2500,
     transition: 'slide', // 'slide', 'fade'
     autoPlay: false,
     onSlideComplete: function(){ console.log('slide loaded'); }
-}
+});
 ```
