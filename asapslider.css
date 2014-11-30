@@ -5,8 +5,8 @@
 
 .slider-wrap {
     position: relative;
-    width: 360px;
-    height: 245px;
+    width: 600px;
+    height: 250px;
     margin: 0 auto;
     overflow: hidden;
 }
@@ -39,23 +39,25 @@
     height: 100%;
     position: relative;
     z-index: 100;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 .active-slide {
     z-index: 200;
 }
 .slide1 {
-    background: url("img/elmo_01.jpg") no-repeat;
+    background-image: url(img/demo_01.jpg);
 }
 .slide2 {
-    background: url("img/elmo_02.jpg") no-repeat;
+    background-image: url(img/demo_02.jpg);
 }
 .slide3 {
-    background: url("img/elmo_03.jpg") no-repeat;
+    background-image: url(img/demo_03.jpg);
 }
 
 .slide p {
     display: inline-block;
-    margin: 50% 0 0;
+    margin: 200px 0 0;
     padding: .5em;
     background: rgba(255, 255, 255, .7);
 }
