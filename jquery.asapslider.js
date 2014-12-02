@@ -13,10 +13,10 @@
         };
         var settings = $.extend({}, defaults, options);
 
-        var slider = this;
-        var state = [0];
-        var i = 0; 
-        var j = 0;
+        var slider = this,
+            state = [0],
+            i = 0, 
+            j = 0;
 
         slider.find('.slide').each(function(){
             state[j]=-(j * $(this).width());
@@ -69,10 +69,10 @@
 
             function switchSlide(){
                 if (settings.transition === 'fade'){
-                    $('.active-slide').removeClass('active-slide').animate({'opacity': 0}, settings.speed);
-                    $('.slide'+(i+1)).addClass('active-slide').animate({'opacity': 1}, settings.speed);
+                    $('.active-slide').removeClass('active-slide').stop().animate({'opacity': 0}, settings.speed);
+                    $('.slide'+(i+1)).addClass('active-slide').stop().animate({'opacity': 1}, settings.speed);
                 } else {
-                    $(slider).find('.slider-content').animate({'margin-left': state[i]}, settings.speed);
+                    $(slider).find('.slider-content').stop().animate({'margin-left': state[i]}, settings.speed);
                 }
             }
 
