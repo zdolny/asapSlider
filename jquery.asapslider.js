@@ -53,11 +53,16 @@
             }
 
             // switch slides - manual
+            var canSlide = true;
             $(slider).on('click', '.slide-left', function(){
-                prevSlide();
+                if(canSlide){
+                    prevSlide();
+                }
             });
             $(slider).on('click', '.slide-right', function(){
-                nextSlide();
+                if(canSlide){
+                    nextSlide();
+                }
             });
 
             // switch slides - auto
@@ -68,11 +73,18 @@
             }
 
             function switchSlide(){
+                canSlide = false;
                 if (settings.transition === 'fade'){
-                    $('.active-slide').removeClass('active-slide').stop().animate({'opacity': 0}, settings.speed);
-                    $('.slide'+(i+1)).addClass('active-slide').stop().animate({'opacity': 1}, settings.speed);
+                    $('.active-slide').removeClass('active-slide').stop().animate({'opacity': 0}, settings.speed, function(){
+                        canSlide = true;
+                    });
+                    $('.slide'+(i+1)).addClass('active-slide').stop().animate({'opacity': 1}, settings.speed, function(){
+                        canSlide = true;
+                    });
                 } else {
-                    $(slider).find('.slider-content').stop().animate({'margin-left': state[i]}, settings.speed);
+                    $(slider).find('.slider-content').stop().animate({'margin-left': state[i]}, settings.speed, function(){
+                        canSlide = true;
+                    });
                 }
             }
 
